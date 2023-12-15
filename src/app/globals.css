@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header;
+  }
+
+  /*************************** Font size ***************************/
+  .h1-extrabold,
+  .h1-bold,
+  .h1-semibold,
+  .h1-medium,
+  .h1-regular {
+    font-size: clamp(1.75rem, 1.127vw + 1.486rem, 2.5rem);
+    line-height: clamp(2.251rem, 1.502vw + 1.899rem, 3.25rem);
+  }
+
+  .h2-extrabold,
+  .h2-bold,
+  .h2-semibold,
+  .h2-medium,
+  .h2-regular {
+    font-size: clamp(1.625rem, 0.939vw + 1.405rem, 2.25rem);
+    line-height: clamp(2.249rem, 1.127vw + 1.985rem, 2.999rem);
+  }
+
+  .h3-extrabold,
+  .h3-bold,
+  .h3-semibold,
+  .h3-medium,
+  .h3-regular {
+    font-size: clamp(1.5rem, 0.751vw + 1.324rem, 2rem);
+    line-height: clamp(1.999rem, 1.128vw + 1.735rem, 2.75rem);
+  }
+
+  .h4-extrabold,
+  .h4-bold,
+  .h4-semibold,
+  .h4-medium,
+  .h4-regular {
+    font-size: clamp(1.25rem, 0.751vw + 1.074rem, 1.75rem);
+    line-height: clamp(1.75rem, 1.128vw + 1.486rem, 2.501rem);
+  }
+
+  .h5-extrabold,
+  .h5-bold,
+  .h5-semibold,
+  .h5-medium,
+  .h5-regular {
+    font-size: clamp(1.125rem, 0.563vw + 0.993rem, 1.5rem);
+    line-height: clamp(1.5rem, 0.751vw + 1.324rem, 1.999rem);
+  }
+
+  .h6-extrabold,
+  .h6-bold,
+  .h6-semibold,
+  .h6-medium,
+  .h6-regular {
+    font-size: clamp(1rem, 0.376vw + 0.912rem, 1.25rem);
+    line-height: clamp(1.25rem, 0.751vw + 1.074rem, 1.75rem);
+  }
+
+  /***************************Font weight ***************************/
+  .h1-extrabold,
+  .h2-extrabold,
+  .h3-extrabold,
+  .h4-extrabold,
+  .h5-extrabold,
+  .h6-extrabold {
+    @apply font-extrabold;
+  }
+
+  .h1-bold,
+  .h2-bold,
+  .h3-bold,
+  .h4-bold,
+  .h5-bold,
+  .h6-bold {
+    @apply font-bold;
+  }
+
+  .h1-semibold,
+  .h2-semibold,
+  .h3-semibold,
+  .h4-semibold,
+  .h5-semibold,
+  .h6-semibold {
+    @apply font-semibold;
+  }
+
+  .h1-medium,
+  .h2-medium,
+  .h3-medium,
+  .h4-medium,
+  .h5-medium,
+  .h6-medium {
+    @apply font-medium;
+  }
+
+  .h1-regular,
+  .h2-regular,
+  .h3-regular,
+  .h4-regular,
+  .h5-regular,
+  .h6-regular {
+    @apply font-normal;
+  }
+}
