@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato, Playfair } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato"
+});
+
+const playfair = Playfair({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-playfair"
+});
 
 export const metadata: Metadata = {
   title: "Hoopsy Daisy",
@@ -18,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${lato.variable} ${playfair.variable}`}>
         {children}
         <SpeedInsights />
       </body>
