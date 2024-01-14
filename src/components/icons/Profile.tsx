@@ -1,7 +1,11 @@
-const Profile = () => {
+type ProfileProps = {
+  className?: string;
+};
+
+const Profile = ({ className }: ProfileProps) => {
   return (
     <svg
-      className="cursor-pointer"
+      className={`cursor-pointer ${className}`}
       width="24"
       height="24"
       viewBox="0 0 24 24"
