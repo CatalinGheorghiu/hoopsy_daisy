@@ -1,7 +1,11 @@
-const Search = () => {
+type SearchProps = {
+  className?: string;
+};
+
+const Search = ({ className }: SearchProps) => {
   return (
     <svg
-      className="cursor-pointer"
+      className={`cursor-pointer ${className}`}
       width="24"
       height="24"
       viewBox="0 0 24 24"
