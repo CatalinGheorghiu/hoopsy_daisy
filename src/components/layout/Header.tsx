@@ -1,5 +1,6 @@
 import MobileNav from "@/components/navigation/MobileNav";
 import DesktopNav from "@/components/navigation/DesktopNav";
+import AnnouncementBar from "@/components/layout/announcement/AnnouncementBar";
 
 type Link = {
   name: string;
@@ -37,6 +38,7 @@ const navigation: Navigation[] = [
 const Header = () => {
   return (
     <header>
+      <AnnouncementBar />
       <MobileNav navigation={navigation} />
       <DesktopNav navigation={navigation} />
     </header>
