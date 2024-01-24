@@ -31,9 +31,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${playfair.variable}`}>
+      <body
+        className={`${lato.variable} ${playfair.variable} flex h-screen flex-col`}
+      >
         <Header />
-        {children}
+        <main className="flex flex-grow flex-col items-center">{children}</main>
         <SpeedInsights />
         <Footer />
       </body>
