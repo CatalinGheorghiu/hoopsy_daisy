@@ -40,7 +40,8 @@ const config: Config = {
       },
       boxShadow: {
         "custom-1":
-          "0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20)"
+          "0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20)",
+        "custom-2": "0px 1px 8px 0px rgba(0, 0, 0, 0.15);"
       }
     }
   },
