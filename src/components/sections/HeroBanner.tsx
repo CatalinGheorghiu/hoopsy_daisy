@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HeroImage from "@/public/images/hero_banner.jpeg";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 const HeroBanner = () => {
   return (
@@ -19,7 +19,9 @@ const HeroBanner = () => {
             non duis platea commodo nam nuncnon. Tincidunt.
           </p>
 
-          <Button className="mt-2">Shop Now</Button>
+          <Button size="xl" className="mt-2 max-w-fit">
+            Shop Now
+          </Button>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Woman from "@/public/images/woman_1.png";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 const ImageWithCard = () => {
   return (
@@ -14,7 +14,7 @@ const ImageWithCard = () => {
         />
       </div>
 
-      <div className="shadow-custom-2 relative mx-auto -mt-10 flex h-fit max-w-[312px] flex-col rounded border border-custom-black-300 bg-white px-4 py-8 md:-mr-10 md:mt-0 md:w-1/2 md:max-w-screen-sm lg:p-14">
+      <div className="relative mx-auto -mt-10 flex h-fit max-w-[312px] flex-col rounded border border-custom-black-300 bg-white px-4 py-8 shadow-custom-2 md:-mr-10 md:mt-0 md:w-1/2 md:max-w-screen-sm lg:p-14">
         <h2 className="h4 h4-semibold md:h3 md:h3-semibold">
           Pulvinar Aliquetl Elget Adinar
         </h2>
@@ -22,7 +22,9 @@ const ImageWithCard = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum
           pellentesque condimentum id ipsum eu augu sit ame.
         </p>
-        <Button>Read More</Button>
+        <Button size="xl" className="max-w-fit">
+          Read More
+        </Button>
       </div>
     </section>
   );

@@ -1,42 +1,103 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"
   ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"
+      }
+    },
     extend: {
       fontFamily: {
         header: ["var(--font-playfair)"],
         body: ["var(--font-lato)"]
       },
-      fontSize: {},
       colors: {
         "custom-black": {
-          100: "#FAFAFA",
-          200: "#F5F5F5",
-          300: "#E6E6E6",
-          400: "#BDBDBD",
-          500: "#808080",
-          600: "#545454",
-          700: "#424242",
-          800: "#292929",
-          900: "#1A1A1A"
+          100: "hsl(0, 0%, 98%)",
+          200: "hsl(0, 0%, 96%)",
+          300: "hsl(0, 0%, 90%)",
+          400: "hsl(0, 0%, 74%)",
+          500: "hsl(0, 0%, 50%)",
+          600: "hsl(0, 0%, 33%)",
+          700: "hsl(0, 0%, 26%)",
+          800: "hsl(0, 0%, 16%)",
+          900: "hsl(0, 0%, 10%)"
         },
         "custom-purple": {
-          100: "#F9F7FC",
-          200: "#EDE8F7",
-          300: "#C5B5E3",
-          400: "#B49FDA",
-          500: "#977BCC",
-          600: "#8565C3",
-          700: "#7A56BD",
-          800: "#6340A5",
-          900: "#583993"
+          100: "hsl(264, 45%, 98%)",
+          200: "hsl(260, 48%, 94%)",
+          300: "hsl(261, 45%, 80%)",
+          400: "hsl(261, 44%, 74%)",
+          500: "hsl(261, 44%, 64%)",
+          600: "hsl(260, 44%, 58%)",
+          700: "hsl(261, 44%, 54%)",
+          800: "hsl(261, 44%, 45%)",
+          900: "hsl(261, 44%, 40%)"
         },
-        "custom-green": "#5FDD82"
+        "custom-green": "hsl(137, 65%, 62%)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))"
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))"
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))"
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))"
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))"
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))"
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))"
+        }
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)"
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" }
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" }
+        }
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out"
       },
       boxShadow: {
         "custom-1":
@@ -45,6 +106,7 @@ const config: Config = {
       }
     }
   },
-  plugins: []
-};
+  plugins: [require("tailwindcss-animate")]
+} satisfies Config;
+
 export default config;
