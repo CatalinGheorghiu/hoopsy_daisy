@@ -13,7 +13,7 @@ import Visa from "@/components/icons/Visa";
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-custom-purple-800 px-4 pb-5 pt-14 text-white md:px-14 md:py-14">
-      <div className="mx-auto flex w-full max-w-screen-2xl flex-col">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col">
         <div className="md:gap-x-10 lg:mb-20 lg:flex lg:justify-between">
           {/* Newsletter */}
           <div>

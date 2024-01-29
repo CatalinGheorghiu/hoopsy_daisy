@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 const HeroBanner = () => {
   return (
     <section className="flex w-full flex-col border-b border-custom-black-300 md:flex-row-reverse">
-      <div className="mx-auto flex w-full max-w-screen-2xl flex-col md:flex-row-reverse">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col md:flex-row-reverse">
         <Image
           src={HeroImage}
           alt="Hero banner image"

@@ -27,7 +27,7 @@ const DesktopNav = ({ navigation }: DesktopNavProps) => {
 
   return (
     <nav className="relative hidden items-center justify-between border-b-2 border-b-custom-black-200 p-7 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] md:flex lg:px-14">
-      <div className="mx-auto flex w-full max-w-screen-xl lg:max-w-screen-2xl">
+      <div className="mx-auto flex w-full max-w-screen-xl lg:max-w-screen-xl">
         <div className="flex w-full items-center gap-x-16">
           <Logo className="lg:h-28 lg:w-28" />
           {navigation.length > 0 && (

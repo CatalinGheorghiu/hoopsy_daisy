@@ -56,7 +56,7 @@ const CarouselList = () => {
           featuredCategoryProducts.map((product) => (
             <CarouselItem
               key={product.id}
-              className="basis-3/4 md:basis-1/2 lg:basis-1/4"
+              className="basis-3/4 sm:basis-4/12 lg:basis-1/4"
             >
               <Image
                 src={product.img}

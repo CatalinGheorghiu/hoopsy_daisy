@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 
 const ImageWithCard = () => {
   return (
-    <section className="mx-auto flex w-full max-w-screen-xl flex-col px-4 py-14 md:flex-row-reverse md:items-center md:p-14 lg:max-w-screen-2xl lg:py-20 2xl:px-0">
+    <section className="mx-auto flex w-full max-w-screen-xl flex-col px-4 py-14 md:flex-row-reverse md:items-center md:p-14 lg:max-w-screen-xl lg:py-20 2xl:px-0">
       <div className="relative md:w-1/2">
         <Image
           src={Woman}
