@@ -15,7 +15,9 @@ const lato = Lato({
 const playfair = Playfair({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-playfair"
+  variable: "--font-playfair",
+  display: "swap",
+  adjustFontFallback: false
 });
 
 export const metadata: Metadata = {
