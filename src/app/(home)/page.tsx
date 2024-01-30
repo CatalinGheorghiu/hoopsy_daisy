@@ -3,6 +3,7 @@ import ImageWithCard from "@/components/sections/ImageWithCard";
 import FeaturedCategory from "@/components/sections/FeaturedCategory";
 import MultiColumn from "@/components/sections/MultiColumn";
 import RichText from "@/components/sections/RichText";
+import FeaturedIn from "@/components/sections/featured-in/FeaturedIn";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroBanner />
       <ImageWithCard />
       <FeaturedCategory />
+      <FeaturedIn />
       <MultiColumn />
       <RichText />
     </>
