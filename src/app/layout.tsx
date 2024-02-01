@@ -1,10 +1,13 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Lato, Playfair } from "next/font/google";
-import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+import { cn } from "@/lib/utils";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import React from "react";
+
+import "./globals.css";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -34,7 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lato.variable} ${playfair.variable} flex h-screen flex-col`}
+        className={cn("flex h-screen flex-col", [
+          lato.variable,
+          playfair.variable
+        ])}
       >
         <Header />
         <main className="flex flex-grow flex-col items-center">{children}</main>

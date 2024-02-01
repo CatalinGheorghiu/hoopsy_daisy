@@ -9,10 +9,10 @@ type ProductImageProps = {
 
 const ProductImage = ({ product }: ProductImageProps) => {
   return (
-    <div className="relative h-[380px] w-auto rounded-[8px]">
+    <div className="rounded-8 relative h-[380px] w-auto">
       <Image
-        className="h-[380px] w-[295px] rounded-[8px] object-cover"
-        src={product.images[0] ? product.images[0] : PlaceholderImage}
+        className="rounded-8 h-[380px] w-[295px] object-cover"
+        src={product.images?.[0] ?? PlaceholderImage}
         alt={product.title}
         fill
         sizes="380px"

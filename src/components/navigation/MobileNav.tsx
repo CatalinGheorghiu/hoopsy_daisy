@@ -1,10 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+
 import Menu from "@/components/icons/Menu";
 import Logo from "@/components/Logo";
 import Cart from "@/components/icons/Cart";
 import NavigationDrawer from "@/components/navigation/NavigationDrawer";
-import { useEffect, useState } from "react";
 import { Navigation } from "@/components/layout/Header";
 
 type NavigationProps = {
@@ -32,11 +34,12 @@ const MobileNav = ({ navigation }: NavigationProps) => {
         </div>
       </div>
       <div
-        className={`relative overflow-hidden transition-all duration-500 ease-in-out ${
+        className={cn(
+          "relative overflow-hidden transition-all duration-500 ease-in-out",
           isDrawerOpen
             ? "h-[calc(100vh_-_112px)] translate-x-0"
             : "h-0 translate-x-full"
-        }`}
+        )}
       >
         <div
           className="absolute bottom-0 right-0 h-full w-full bg-custom-black-900/60"

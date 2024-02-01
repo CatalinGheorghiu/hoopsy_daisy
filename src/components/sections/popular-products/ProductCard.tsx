@@ -22,7 +22,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <>
-      <div className="relative rounded-[8px] bg-custom-purple-200">
+      <div className="rounded-8 relative bg-custom-purple-200">
         <ProductImage product={product.variants[activeVariant]} />
 
         <TagList tags={product.tags} />

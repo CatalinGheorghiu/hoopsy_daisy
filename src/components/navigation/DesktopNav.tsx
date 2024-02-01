@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 import Search from "@/components/icons/Search";
 import { Navigation } from "@/components/layout/Header";
@@ -43,9 +44,10 @@ const DesktopNav = ({ navigation }: DesktopNavProps) => {
                     <div className="flex items-center">
                       <p className="mr-2">{name}</p>
                       <Arrow
-                        className={`${
+                        className={cn(
+                          "transition-transform duration-500 ease-in-out lg:h-auto lg:w-8",
                           isMenuVisible[name] ? "-rotate-90" : "rotate-90"
-                        } transition-transform duration-500 ease-in-out lg:h-auto lg:w-8`}
+                        )}
                       />
                     </div>
                   ) : (
@@ -56,11 +58,12 @@ const DesktopNav = ({ navigation }: DesktopNavProps) => {
                   {/* Submenu */}
                   {links.length > 0 && (
                     <div
-                      className={`absolute top-6 mt-2 flex flex-col overflow-hidden bg-white transition-all duration-500 ease-linear ${
+                      className={cn(
+                        "absolute top-6 mt-2 flex flex-col overflow-hidden bg-white transition-all duration-500 ease-linear",
                         isMenuVisible[name]
-                          ? "h-fit rounded-lg border py-2"
+                          ? "rounded-4 h-fit border py-2"
                           : "h-0 border-0 border-transparent"
-                      }`}
+                      )}
                     >
                       {/* Submenu Item */}
                       {links.map((linkItem) => (

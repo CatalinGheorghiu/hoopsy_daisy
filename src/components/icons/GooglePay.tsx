@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 type GooglePayProps = {
   className?: string;
 };
@@ -5,7 +7,7 @@ type GooglePayProps = {
 const GooglePay = ({ className }: GooglePayProps) => {
   return (
     <svg
-      className={`${className} text-3xl`}
+      className={cn("text-3xl", className)}
       xmlns="http://www.w3.org/2000/svg"
       width="36"
       height="24"

@@ -10,7 +10,7 @@ const TagList = ({ tags }: TagListProps) => {
       {tags.map((tag, index) => (
         <span
           key={`tag-${tag}-${index}`}
-          className="rounded-[4px] bg-custom-purple-800 px-4 py-0.5 text-sm capitalize text-white"
+          className="rounded-4 bg-custom-purple-800 px-4 py-0.5 text-sm capitalize text-white"
         >
           {tag}
         </span>
