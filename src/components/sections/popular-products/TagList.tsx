@@ -3,19 +3,19 @@ type TagListProps = {
 };
 
 const TagList = ({ tags }: TagListProps) => {
-  if (!tags) return;
+  if (tags.length < 1) return;
 
   return (
-    <div className="absolute left-4 top-4 flex gap-x-4">
+    <ul className="absolute left-4 top-4 flex gap-x-4">
       {tags.map((tag, index) => (
-        <span
+        <li
           key={`tag-${tag}-${index}`}
           className="rounded-4 bg-custom-purple-800 px-4 py-0.5 text-sm capitalize text-white"
         >
           {tag}
-        </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
