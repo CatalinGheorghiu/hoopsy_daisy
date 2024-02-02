@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 import LogoImage from "@/public/images/HD_Logo.png";
 
@@ -11,7 +12,7 @@ const Logo = ({ className }: LogoProps) => {
     <Image
       src={LogoImage}
       alt="Logo"
-      className={`h-20 w-20 rounded-full ${className}`}
+      className={cn("h-20 w-20 rounded-full", className)}
     />
   );
 };

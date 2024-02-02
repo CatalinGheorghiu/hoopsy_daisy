@@ -1,6 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+
 import Close from "@/components/icons/Close";
 import Search from "@/components/icons/Search";
 import Profile from "@/components/icons/Profile";
@@ -28,9 +30,7 @@ const NavigationDrawer = ({
   }
 
   return (
-    <div
-      className={`relative z-10 flex h-full w-4/5 max-w-[400px] flex-col bg-white px-4 pb-10 pt-7`}
-    >
+    <div className="relative z-10 flex h-full w-4/5 max-w-[400px] flex-col bg-white px-4 pb-10 pt-7">
       <div className="flex justify-between pb-7">
         <Close onClick={() => handleDrawer(false)} />
         <div className="flex gap-x-5">
@@ -45,9 +45,10 @@ const NavigationDrawer = ({
             {navigation.map(({ name, handle, links }, index) => (
               <li
                 key={`link-${handle}`}
-                className={`${
+                className={cn(
+                  "py-4",
                   index === navigation.length - 1 ? "border-y" : "border-t"
-                } py-4`}
+                )}
                 onClick={() => {
                   if (links.length > 0) {
                     handleToggleMenu(name.toLowerCase());
@@ -61,22 +62,24 @@ const NavigationDrawer = ({
 
                   {links.length > 0 && (
                     <Arrow
-                      className={`${
+                      className={cn(
+                        "transition-transform duration-500 ease-in-out",
                         isMenuOpen[name.toLowerCase()]
                           ? "-rotate-90"
                           : "rotate-0"
-                      } transition-transform duration-500 ease-in-out`}
+                      )}
                     />
                   )}
                 </button>
 
                 {links.length > 0 && (
                   <div
-                    className={`${
+                    className={cn(
+                      "grid text-sm text-custom-black-600",
                       isMenuOpen[name.toLowerCase()]
                         ? "grid-rows-[1fr]"
                         : "grid-rows-[0fr]"
-                    } grid text-sm text-custom-black-600`}
+                    )}
                     style={{
                       transition: "grid-template-rows 0.5s ease-out"
                     }}

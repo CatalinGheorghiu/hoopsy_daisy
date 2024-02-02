@@ -51,7 +51,7 @@ const CarouselList = () => {
       ]}
       className="mt-14"
     >
-      <CarouselContent className="">
+      <CarouselContent>
         {featuredCategoryProducts.length > 0 &&
           featuredCategoryProducts.map((product) => (
             <CarouselItem

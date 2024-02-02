@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 type CartProps = {
   className?: string;
 };
@@ -5,7 +7,7 @@ type CartProps = {
 const Cart = ({ className }: CartProps) => {
   return (
     <svg
-      className={`cursor-pointer ${className}`}
+      className={cn("cursor-pointer", className)}
       width="24"
       height="24"
       viewBox="0 0 24 24"

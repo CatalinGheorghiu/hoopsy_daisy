@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Image, { StaticImageData } from "next/image";
+import { cn } from "@/lib/utils";
 
 import NikeLogoImg from "@/public/images/nike_logo.png";
 import AdidasLogoImg from "@/public/images/adidas_logo.png";
@@ -107,11 +108,12 @@ const CompanyLogoSlider = () => {
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={`mx-3 flex cursor-pointer touch-manipulation items-center border-0 p-0 no-underline after:h-2 after:bg-white after:content-[""] ${
+            className={cn(
+              'mx-3 flex cursor-pointer touch-manipulation items-center border-0 p-0 no-underline after:h-2 after:bg-white after:content-[""]',
               index === selectedIndex
                 ? "after:w-10 after:rounded-[1.25rem]"
                 : "after:w-2 after:rounded-full"
-            }`}
+            )}
           />
         ))}
       </div>
