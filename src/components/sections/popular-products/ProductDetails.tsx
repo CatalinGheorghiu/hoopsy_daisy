@@ -7,7 +7,7 @@ type ProductDetailsProps = {
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
   return (
-    <div className="mt-3.5 flex items-center justify-between ">
+    <div className="mt-3.5 flex justify-between">
       <h3 className="h6 h6-medium border-l-4 border-custom-purple-900 pl-2">
         {product.title}
       </h3>

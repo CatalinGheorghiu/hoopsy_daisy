@@ -22,7 +22,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <>
-      <div className="rounded-8 relative bg-custom-purple-200">
+      <div className="relative rounded-8 bg-custom-purple-200">
         <ProductImage product={product.variants[activeVariant]} />
 
         <TagList tags={product.tags} />
@@ -32,13 +32,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </Button>
       </div>
 
-      <ProductDetails product={product.variants[activeVariant]} />
+      <div className="grid">
+        <ProductDetails product={product.variants[activeVariant]} />
 
-      <SwatchList
-        variants={product.variants}
-        activeVariant={activeVariant}
-        changeVariant={handleActiveVariant}
-      />
+        <SwatchList
+          variants={product.variants}
+          activeVariant={activeVariant}
+          changeVariant={handleActiveVariant}
+        />
+      </div>
     </>
   );
 };
