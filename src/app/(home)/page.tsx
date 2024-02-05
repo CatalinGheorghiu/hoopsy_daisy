@@ -7,6 +7,7 @@ import FeaturedIn from "@/components/sections/featured-in/FeaturedIn";
 import PopularProducts from "@/components/sections/popular-products/PopularProducts";
 import OrderSteps from "@/components/sections/order-steps/OrderSteps";
 import Inspiration from "@/components/sections/inspiration/Inspiration";
+import ImageBanner from "@/components/sections/image-banner/ImageBanner";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <OrderSteps />
       <MultiColumn />
       <RichText />
+      <ImageBanner />
       <Inspiration />
     </>
   );
