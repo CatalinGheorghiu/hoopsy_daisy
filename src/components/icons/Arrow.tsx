@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 type ArrowProps = {
-  className: string;
+  className?: string;
 };
 
 const Arrow = ({ className }: ArrowProps) => {
