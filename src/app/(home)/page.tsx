@@ -8,6 +8,7 @@ import PopularProducts from "@/components/sections/popular-products/PopularProdu
 import OrderSteps from "@/components/sections/order-steps/OrderSteps";
 import Inspiration from "@/components/sections/inspiration/Inspiration";
 import ImageBanner from "@/components/sections/image-banner/ImageBanner";
+import Collage from "@/components/sections/collage/Collage";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OrderSteps />
       <MultiColumn />
       <RichText />
+      <Collage />
       <ImageBanner />
       <Inspiration />
     </>
