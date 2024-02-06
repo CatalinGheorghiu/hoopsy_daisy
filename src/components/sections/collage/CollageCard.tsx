@@ -11,7 +11,6 @@ const CollageCard = ({ item }: CollageCardProps) => {
   return (
     <div
       className={cn(
-        "",
         item.featured ? "col-span-2 md:row-span-2" : "md:col-span-1"
       )}
     >
