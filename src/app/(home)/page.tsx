@@ -9,6 +9,7 @@ import OrderSteps from "@/components/sections/order-steps/OrderSteps";
 import Inspiration from "@/components/sections/inspiration/Inspiration";
 import ImageBanner from "@/components/sections/image-banner/ImageBanner";
 import Collage from "@/components/sections/collage/Collage";
+import Faq from "@/components/sections/faq/Faq";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Collage />
       <ImageBanner />
       <Inspiration />
+      <Faq />
     </>
   );
 }
