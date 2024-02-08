@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import InspirationCardList from "@/components/sections/inspiration/InspirationCardList";
 
-type InspirationProps = {};
-
-const Inspiration = ({}: InspirationProps) => {
+const Inspiration = () => {
   return (
     <section className="mx-auto flex w-full max-w-screen-xl flex-col px-4 py-14 md:px-14">
       <div className="relative mx-auto flex w-full max-w-screen-xl flex-col">
