@@ -10,6 +10,7 @@ import Inspiration from "@/components/sections/inspiration/Inspiration";
 import ImageBanner from "@/components/sections/image-banner/ImageBanner";
 import Collage from "@/components/sections/collage/Collage";
 import Faq from "@/components/sections/faq/Faq";
+import Testimonials from "@/components/sections/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <RichText />
       <Collage />
       <ImageBanner />
+      <Testimonials />
       <Inspiration />
       <Faq />
     </>

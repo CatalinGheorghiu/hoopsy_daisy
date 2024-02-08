@@ -84,6 +84,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        2: "2px",
         4: "4px",
         6: "6px",
         8: "10px",
