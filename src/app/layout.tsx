@@ -1,13 +1,13 @@
-import React from "react";
+import "./globals.css";
+
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Lato, Playfair } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import React from "react";
 
-import { cn } from "@/lib/utils";
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
-import "./globals.css";
+import Header from "@/components/layout/Header";
+import { cn } from "@/lib/utils";
 
 const lato = Lato({
   subsets: ["latin"],

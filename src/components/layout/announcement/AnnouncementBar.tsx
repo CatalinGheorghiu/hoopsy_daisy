@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import AnnouncementMessage from "@/components/layout/announcement/AnnouncementMessage";
 
 export type AnnouncementMessageType = {

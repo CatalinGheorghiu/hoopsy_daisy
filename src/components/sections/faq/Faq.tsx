@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
 import FaqList from "@/components/sections/faq/FaqList";
+import { Button } from "@/components/ui/Button";
 
 export type FaqItemType = {
   id: number;

@@ -1,5 +1,6 @@
-import { InspirationItemType } from "@/components/sections/inspiration/InspirationCardList";
 import Image from "next/image";
+
+import { InspirationItemType } from "@/components/sections/inspiration/InspirationCardList";
 
 type InspirationCardProps = { item: InspirationItemType };
 

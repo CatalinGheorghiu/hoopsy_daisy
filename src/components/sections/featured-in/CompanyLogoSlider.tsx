@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 
-import NikeLogoImg from "@/public/images/nike_logo.png";
+import Slider from "@/components/ui/Slider";
 import AdidasLogoImg from "@/public/images/adidas_logo.png";
-import TeslaLogoImg from "@/public/images/tesla_logo.png";
 import AMDLogoImg from "@/public/images/amd_logo.png";
 import AppleLogoImg from "@/public/images/apple_logo.png";
 import LinuxLogoImg from "@/public/images/linux_logo.png";
-import Slider from "@/components/ui/Slider";
+import NikeLogoImg from "@/public/images/nike_logo.png";
+import TeslaLogoImg from "@/public/images/tesla_logo.png";
 
 export type FeaturedCompany = {
   id: number;

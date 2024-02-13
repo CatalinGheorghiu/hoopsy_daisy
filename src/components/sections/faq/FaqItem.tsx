@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-import { cn } from "@/lib/utils";
-import { FaqItemType } from "@/components/sections/faq/Faq";
 import Arrow from "@/components/icons/Arrow";
+import { FaqItemType } from "@/components/sections/faq/Faq";
+import { cn } from "@/lib/utils";
 
 type FaqItemProps = { item: FaqItemType; isLast: boolean };
 

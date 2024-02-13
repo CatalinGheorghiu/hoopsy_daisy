@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import Person1 from "@/public/images/card_1.jpg";
-import Person2 from "@/public/images/card_2.jpg";
+import InspirationCard from "@/components/sections/inspiration/InspirationCard";
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/Carousel";
-import InspirationCard from "@/components/sections/inspiration/InspirationCard";
+import Person1 from "@/public/images/card_1.jpg";
+import Person2 from "@/public/images/card_2.jpg";
 
 export type InspirationItemType = {
   id: number;

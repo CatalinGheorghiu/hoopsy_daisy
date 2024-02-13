@@ -1,5 +1,5 @@
-import { ProductType } from "@/components/sections/popular-products/PopularProducts";
 import CollageCard from "@/components/sections/collage/CollageCard";
+import { ProductType } from "@/components/sections/popular-products/PopularProducts";
 
 export type CollectionType = {
   id: number;
