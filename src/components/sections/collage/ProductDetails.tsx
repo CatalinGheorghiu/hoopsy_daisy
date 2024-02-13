@@ -1,5 +1,5 @@
-import { formatNumberWithComma } from "@/lib/utils";
 import { ProductType } from "@/components/sections/popular-products/PopularProducts";
+import { formatNumberWithComma } from "@/lib/utils";
 
 type ProductDetailsProps = { item: ProductType };
 

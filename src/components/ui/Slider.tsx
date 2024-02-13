@@ -1,15 +1,22 @@
 "use client";
 
-import { ReactNode, useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
+
 import { cn } from "@/lib/utils";
 
 type SliderProps = {
   children: ReactNode;
+  className?: string;
+  hasNavigation?: boolean;
 };
 
-const Slider = ({ children }: SliderProps) => {
+const Slider = ({
+  children,
+  className,
+  hasNavigation = false
+}: SliderProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({});
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -39,7 +46,7 @@ const Slider = ({ children }: SliderProps) => {
 
   return (
     <>
-      <div className="my-10">
+      <div className={cn("my-10", className)}>
         <div className="overflow-hidden" ref={emblaRef}>
           <ul className="ml-[calc(1rem_*_-1)] flex cursor-grab touch-pan-y">
             {children}
@@ -47,7 +54,7 @@ const Slider = ({ children }: SliderProps) => {
         </div>
       </div>
 
-      {scrollSnaps.length > 1 && (
+      {scrollSnaps.length > 1 && hasNavigation && (
         <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center">
           {scrollSnaps.map((_, index) => (
             <button
