@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-import Logo from "@/components/Logo";
 import Facebook from "@/components/icons/Facebook";
-import Instagram from "@/components/icons/Instagram";
-import Twitter from "@/components/icons/Twitter";
 import GooglePay from "@/components/icons/GooglePay";
+import Instagram from "@/components/icons/Instagram";
 import Maestro from "@/components/icons/Maestro";
 import MasterCard from "@/components/icons/MasterCard";
 import PayPal from "@/components/icons/PayPal";
+import Twitter from "@/components/icons/Twitter";
 import Visa from "@/components/icons/Visa";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   return (

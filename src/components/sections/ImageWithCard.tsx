@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Woman from "@/public/images/woman_1.png";
 import { Button } from "@/components/ui/Button";
+import Woman from "@/public/images/woman_1.png";
 
 const ImageWithCard = () => {
   return (

@@ -1,6 +1,6 @@
-import MobileNav from "@/components/navigation/MobileNav";
-import DesktopNav from "@/components/navigation/DesktopNav";
 import AnnouncementBar from "@/components/layout/announcement/AnnouncementBar";
+import DesktopNav from "@/components/navigation/DesktopNav";
+import MobileNav from "@/components/navigation/MobileNav";
 
 type Link = {
   name: string;

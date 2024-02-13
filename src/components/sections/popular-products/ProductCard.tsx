@@ -2,28 +2,37 @@
 
 import { useState } from "react";
 
-import { ProductType } from "@/components/sections/popular-products/PopularProducts";
-import SwatchList from "@/components/sections/popular-products/SwatchList";
-import ProductImage from "@/components/sections/popular-products/ProductImage";
+import SwatchList from "@/components/product/SwatchList";
+import {
+  ProductType,
+  VariantType
+} from "@/components/sections/popular-products/PopularProducts";
 import ProductDetails from "@/components/sections/popular-products/ProductDetails";
+import ProductImage from "@/components/sections/popular-products/ProductImage";
 import TagList from "@/components/sections/popular-products/TagList";
 import { Button } from "@/components/ui/Button";
+import { getUniqueByKey } from "@/lib/utils";
 
 type ProductCardProps = {
   product: ProductType;
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const [activeVariant, setActiveVariant] = useState(0);
+  const [activeVariant, setActiveVariant] = useState(product.variants[0]);
+  const uniqueSwatches = getUniqueByKey(product.variants, "color");
 
-  function handleActiveVariant(target: number) {
+  const hasSwatches = product.variants.some((variant) =>
+    variant.hasOwnProperty("color")
+  );
+
+  function handleActiveVariant(target: VariantType) {
     setActiveVariant(target);
   }
 
   return (
     <>
       <div className="relative rounded-8 bg-custom-purple-200">
-        <ProductImage product={product.variants[activeVariant]} />
+        <ProductImage product={activeVariant} />
 
         <TagList tags={product.tags} />
 
@@ -33,13 +42,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </div>
 
       <div className="grid">
-        <ProductDetails product={product.variants[activeVariant]} />
+        <ProductDetails product={activeVariant} />
 
-        <SwatchList
-          variants={product.variants}
-          activeVariant={activeVariant}
-          changeVariant={handleActiveVariant}
-        />
+        {hasSwatches && (
+          <SwatchList
+            variants={uniqueSwatches}
+            activeVariant={activeVariant}
+            changeVariant={handleActiveVariant}
+          />
+        )}
       </div>
     </>
   );

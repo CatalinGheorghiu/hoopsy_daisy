@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
 
+import Arrow from "@/components/icons/Arrow";
+import Cart from "@/components/icons/Cart";
+import Profile from "@/components/icons/Profile";
 import Search from "@/components/icons/Search";
 import { Navigation } from "@/components/layout/Header";
-import Profile from "@/components/icons/Profile";
-import Cart from "@/components/icons/Cart";
 import Logo from "@/components/Logo";
-import Arrow from "@/components/icons/Arrow";
+import { cn } from "@/lib/utils";
 
 type DesktopNavProps = {
   navigation: Navigation[];

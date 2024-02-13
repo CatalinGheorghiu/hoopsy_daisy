@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
 import InspirationCardList from "@/components/sections/inspiration/InspirationCardList";
+import { Button } from "@/components/ui/Button";
 
 const Inspiration = () => {
   return (

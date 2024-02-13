@@ -1,6 +1,7 @@
-import Flowers from "@/public/images/bg_flowers.jpg";
 import Image from "next/image";
+
 import { Button } from "@/components/ui/Button";
+import Flowers from "@/public/images/bg_flowers.jpg";
 
 const ImageBanner = () => {
   return (

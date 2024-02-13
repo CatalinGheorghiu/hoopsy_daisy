@@ -1,3 +1,5 @@
+import ProductCard from "@/components/sections/popular-products/ProductCard";
+import { Button } from "@/components/ui/Button";
 import {
   Carousel,
   CarouselContent,
@@ -5,8 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/Carousel";
-import { Button } from "@/components/ui/Button";
-import ProductCard from "@/components/sections/popular-products/ProductCard";
 
 export type ProductType = {
   id: number;
@@ -28,8 +28,42 @@ export type VariantType = Omit<ProductType, "variants" | "tags"> & {
   size?: string;
 };
 
+const PopularProducts = () => {
+  return (
+    <section className="w-full bg-gradient-to-r from-custom-purple-200 to-custom-purple-400 px-4 py-14 md:px-14">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col">
+        <div className="flex items-center justify-between">
+          <h2 className="h4-semibold">Popular</h2>
+          <Button variant="transparent" size="xl" className="max-w-fit">
+            View All
+          </Button>
+        </div>
+
+        <Carousel opts={{ align: "start" }} className="mt-14 cursor-pointer">
+          <CarouselContent>
+            {popularProducts.length > 0 &&
+              popularProducts.map((product) => (
+                <CarouselItem
+                  key={product.id}
+                  className="basis-3/4 sm:basis-4/12 xl:basis-1/4"
+                >
+                  <ProductCard product={product} />
+                </CarouselItem>
+              ))}
+          </CarouselContent>
+
+          <CarouselPrevious className="left-2 md:left-4" />
+          <CarouselNext className="right-2 md:right-4" />
+        </Carousel>
+      </div>
+    </section>
+  );
+};
+
+export default PopularProducts;
+
 //TODO: Fetch the data from DB
-const popularProducts: ProductType[] = [
+export const popularProducts: ProductType[] = [
   {
     id: 1,
     title: "Premium Beer - Modelo",
@@ -91,6 +125,20 @@ const popularProducts: ProductType[] = [
         price_max: 15.0,
         price: 15.0,
         color: "SaddleBrown"
+      },
+      {
+        id: 104,
+        available: true,
+        title: "Modelo Draft",
+        content: "Premium draft beer with a refreshing taste.",
+        handle: "modelo-draft",
+        description: "A perfect choice for draft beer enthusiasts.",
+        images: [
+          "https://images.unsplash.com/photo-1462664450306-25ad625a342b"
+        ],
+        options: [],
+        price_max: 15.0,
+        price: 15.0
       }
     ]
   },
@@ -110,7 +158,25 @@ const popularProducts: ProductType[] = [
       {
         id: 201,
         available: true,
-        title: "Tesla - Stealth Gray",
+        title: "Tesla - Stealth Gray MYLR",
+        content: "Sleek and stylish Tesla Model X in Stealth Gray.",
+        handle: "tesla-stealth-gray",
+        description: "A sophisticated choice for a modern lifestyle.",
+        images: [
+          "https://images.unsplash.com/photo-1652508996643-2fc140eebe1d",
+          "https://images.unsplash.com/photo-1705807258848-97c4fefd4579",
+          "https://images.unsplash.com/photo-1672588714766-ceb0e36a9e0a"
+        ],
+        options: [],
+        price_max: 75000.0,
+        price: 78500.0,
+        color: "SlateGray",
+        size: "MYLR"
+      },
+      {
+        id: 202,
+        available: true,
+        title: "Tesla - Stealth Gray MYP",
         content: "Sleek and stylish Tesla Model X in Stealth Gray.",
         handle: "tesla-stealth-gray",
         description: "A sophisticated choice for a modern lifestyle.",
@@ -119,13 +185,30 @@ const popularProducts: ProductType[] = [
         ],
         options: [],
         price_max: 75000.0,
-        price: 72500.0,
-        color: "SlateGray"
+        price: 92500.0,
+        color: "SlateGray",
+        size: "MYP"
       },
       {
-        id: 202,
+        id: 203,
         available: true,
-        title: "Tesla - Pearl White",
+        title: "Tesla - Stealth Gray MY",
+        content: "Sleek and stylish Tesla Model X in Stealth Gray.",
+        handle: "tesla-stealth-gray",
+        description: "A sophisticated choice for a modern lifestyle.",
+        images: [
+          "https://images.unsplash.com/photo-1652508996643-2fc140eebe1d"
+        ],
+        options: [],
+        price_max: 42990.0,
+        price: 52990.0,
+        color: "SlateGray",
+        size: "MY"
+      },
+      {
+        id: 204,
+        available: true,
+        title: "Tesla - Pearl White MY",
         content: "Tesla Model X in a pristine Pearl White finish.",
         handle: "tesla-pearl-white",
         description: "Experience elegance with this pearl-white electric car.",
@@ -135,10 +218,43 @@ const popularProducts: ProductType[] = [
         options: [],
         price_max: 65000.0,
         price: 65000.0,
-        color: "white"
+        color: "white",
+        size: "MY"
       },
       {
-        id: 203,
+        id: 205,
+        available: true,
+        title: "Tesla - Pearl White MYLR",
+        content: "Tesla Model X in a pristine Pearl White finish.",
+        handle: "tesla-pearl-white",
+        description: "Experience elegance with this pearl-white electric car.",
+        images: [
+          "https://images.unsplash.com/photo-1705807258848-97c4fefd4579"
+        ],
+        options: [],
+        price_max: 65000.0,
+        price: 75000.0,
+        color: "white",
+        size: "MYLR"
+      },
+      {
+        id: 206,
+        available: true,
+        title: "Tesla - Pearl White MYP",
+        content: "Tesla Model X in a pristine Pearl White finish.",
+        handle: "tesla-pearl-white",
+        description: "Experience elegance with this pearl-white electric car.",
+        images: [
+          "https://images.unsplash.com/photo-1705807258848-97c4fefd4579"
+        ],
+        options: [],
+        price_max: 65000.0,
+        price: 85000.0,
+        color: "white",
+        size: "MYP"
+      },
+      {
+        id: 207,
         available: true,
         title: "Tesla - Ultra Red",
         content: "Turn heads with the Tesla Model X in Ultra Red.",
@@ -398,37 +514,3 @@ const popularProducts: ProductType[] = [
     ]
   }
 ];
-
-const PopularProducts = () => {
-  return (
-    <section className="w-full bg-gradient-to-r from-custom-purple-200 to-custom-purple-400 px-4 py-14 md:px-14">
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col">
-        <div className="flex items-center justify-between">
-          <h2 className="h4-semibold">Popular</h2>
-          <Button variant="transparent" size="xl" className="max-w-fit">
-            View All
-          </Button>
-        </div>
-
-        <Carousel opts={{ align: "start" }} className="mt-14 cursor-pointer">
-          <CarouselContent>
-            {popularProducts.length > 0 &&
-              popularProducts.map((product) => (
-                <CarouselItem
-                  key={product.id}
-                  className="basis-3/4 sm:basis-4/12 xl:basis-1/4"
-                >
-                  <ProductCard product={product} />
-                </CarouselItem>
-              ))}
-          </CarouselContent>
-
-          <CarouselPrevious className="left-2 md:left-4" />
-          <CarouselNext className="right-2 md:right-4" />
-        </Carousel>
-      </div>
-    </section>
-  );
-};
-
-export default PopularProducts;
