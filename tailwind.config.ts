@@ -88,7 +88,8 @@ const config = {
         4: "4px",
         6: "6px",
         8: "10px",
-        50: "50px"
+        50: "50px",
+        60: "60px"
       },
       keyframes: {
         "accordion-down": {
