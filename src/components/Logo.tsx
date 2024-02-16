@@ -11,6 +11,7 @@ const Logo = ({ className }: LogoProps) => {
   return (
     <Image
       src={LogoImage}
+      priority
       alt="Logo"
       className={cn("h-20 w-20 rounded-full", className)}
     />
