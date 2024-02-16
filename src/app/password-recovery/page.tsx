@@ -25,7 +25,7 @@ const PasswordRecovery = () => {
               name="email"
               type="email"
               placeholder="Email"
-              autoComplete="username"
+              autoComplete="email"
             />
           </div>
 
