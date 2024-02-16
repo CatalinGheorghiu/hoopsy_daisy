@@ -3,17 +3,17 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 
-const PasswordRecovery = () => {
+const RegisterPage = () => {
   return (
     <section className="flex w-full flex-col px-4 py-20 md:px-14">
       <div className="relative mx-auto flex w-full max-w-[400px] flex-col">
         {/* Title */}
         <div className="flex flex-col text-center">
           <h1 className="h1-semibold pb-2 text-center md:pb-4">
-            Reset you password
+            Create Account
           </h1>
           <p className="text-sm text-custom-black-600 md:text-base">
-            We will send you an email to reset your password
+            Please complete your information
           </p>
         </div>
 
@@ -22,15 +22,39 @@ const PasswordRecovery = () => {
           {/* Inputs */}
           <div className="flex w-full flex-col gap-y-4">
             <Input
+              name="first-name"
+              type="text"
+              placeholder="First Name"
+              autoComplete="given-name"
+            />
+            <Input
+              name="last-name"
+              type="text"
+              placeholder="Last Name"
+              autoComplete="family-name"
+            />
+            <Input
               name="email"
               type="email"
               placeholder="Email"
               autoComplete="email"
             />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Password"
+              autoComplete="current-password"
+            />
+            <Input
+              name="confirm-password"
+              type="password"
+              placeholder="Confirm Password"
+              autoComplete="new-password"
+            />
           </div>
 
           <Button size="2xl" className="my-7 w-[160px] md:w-[200px]">
-            Reset password
+            Create Account
           </Button>
         </form>
 
@@ -46,4 +70,4 @@ const PasswordRecovery = () => {
   );
 };
 
-export default PasswordRecovery;
+export default RegisterPage;

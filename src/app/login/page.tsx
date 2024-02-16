@@ -23,7 +23,7 @@ const Login = () => {
               name="email"
               type="email"
               placeholder="Email"
-              autoComplete="username"
+              autoComplete="email"
             />
             <Input
               name="password"
