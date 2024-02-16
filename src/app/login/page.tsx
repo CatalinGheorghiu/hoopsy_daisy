@@ -1,13 +1,9 @@
-"use client";
-
 import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 
-type LoginProps = {};
-
-const Login = ({}: LoginProps) => {
+const Login = () => {
   return (
     <section className="flex w-full flex-col px-4 py-20 md:px-14">
       <div className="relative mx-auto flex w-full max-w-[400px] flex-col">
@@ -36,9 +32,12 @@ const Login = ({}: LoginProps) => {
               autoComplete="current-password"
             />
           </div>
-          <p className="w-full cursor-pointer py-4 text-right text-sm font-medium underline md:text-base">
+          <Link
+            href="/password-recovery"
+            className="w-full cursor-pointer py-4 text-right text-sm font-medium underline md:text-base"
+          >
             Forgot the password?
-          </p>
+          </Link>
 
           <Button size="2xl" className="my-3 w-[160px] md:w-[200px]">
             Log in
