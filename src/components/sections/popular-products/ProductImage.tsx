@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { VariantType } from "@/components/sections/popular-products/PopularProducts";
+import { VariantType } from "@/lib/product/types";
 import PlaceholderImage from "@/public/images/placeholder_image.png";
 
 type ProductImageProps = {
@@ -9,9 +9,9 @@ type ProductImageProps = {
 
 const ProductImage = ({ product }: ProductImageProps) => {
   return (
-    <div className="rounded-8 relative h-[380px] w-auto">
+    <div className="relative h-[380px] w-auto rounded-8">
       <Image
-        className="rounded-8 h-[380px] w-[295px] object-cover"
+        className="h-[380px] w-[295px] rounded-8 object-cover"
         src={product.images?.[0] ?? PlaceholderImage}
         alt={product.title}
         fill

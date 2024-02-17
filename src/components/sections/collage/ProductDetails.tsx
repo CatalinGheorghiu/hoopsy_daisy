@@ -1,4 +1,4 @@
-import { ProductType } from "@/components/sections/popular-products/PopularProducts";
+import { ProductType } from "@/lib/product/types";
 import { formatNumberWithComma } from "@/lib/utils";
 
 type ProductDetailsProps = { item: ProductType };

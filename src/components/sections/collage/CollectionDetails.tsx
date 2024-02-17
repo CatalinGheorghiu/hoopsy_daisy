@@ -1,5 +1,5 @@
 import Arrow from "@/components/icons/Arrow";
-import { CollectionType } from "@/components/sections/collage/Collage";
+import { CollectionType } from "@/lib/collage/types";
 
 type CategoryDetailsProps = { item: CollectionType };
 

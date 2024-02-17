@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 
 import Cart from "@/components/icons/Cart";
 import Menu from "@/components/icons/Menu";
-import { Navigation } from "@/components/layout/Header";
 import Logo from "@/components/Logo";
 import NavigationDrawer from "@/components/navigation/NavigationDrawer";
+import { Navigation } from "@/lib/navigation/types";
 import { cn } from "@/lib/utils";
 
 type NavigationProps = {

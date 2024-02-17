@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { CollageItemType } from "@/components/sections/collage/Collage";
 import CollectionDetails from "@/components/sections/collage/CollectionDetails";
 import ProductDetails from "@/components/sections/collage/ProductDetails";
+import { CollageItemType } from "@/lib/collage/types";
 import { cn } from "@/lib/utils";
 
 type CollageCardProps = { item: CollageItemType };

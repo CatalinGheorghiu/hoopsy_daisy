@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { TestimonialType } from "@/components/sections/testimonials/TestimonialCardList";
+import { TestimonialType } from "@/lib/testimonial/types";
 import { formatNumberWithComma } from "@/lib/utils";
 
 type TestimonialCardProps = { testimonial: TestimonialType };
