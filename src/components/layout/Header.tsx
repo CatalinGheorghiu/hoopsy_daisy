@@ -24,9 +24,9 @@ const navigation: Navigation[] = [
     ]
   },
   {
-    name: "About",
-    handle: "/about",
-    links: [{ name: "About 1", handle: "/about-1" }]
+    name: "About Us",
+    handle: "/about-us",
+    links: []
   },
   {
     name: "Blog",
