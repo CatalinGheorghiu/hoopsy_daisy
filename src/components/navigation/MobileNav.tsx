@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import Cart from "@/components/icons/Cart";
@@ -29,7 +30,9 @@ const MobileNav = ({ navigation }: NavigationProps) => {
       <div className="relative z-50 flex flex-col items-center justify-between border-b-2 border-custom-black-200 p-4">
         <div className="flex w-full items-center justify-between">
           <Menu onClick={() => setIsDrawerOpen(true)} />
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <Cart />
         </div>
       </div>

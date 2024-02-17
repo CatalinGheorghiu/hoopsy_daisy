@@ -18,7 +18,9 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <div className="flex flex-col gap-y-4 pb-8">
-              <Logo className="lg:h-28 lg:w-28" />
+              <Link href="/">
+                <Logo className="lg:h-28 lg:w-28" />
+              </Link>
               <p className="max-w-lg leading-7 lg:my-6">
                 Subscribe to our newsletter for a 10% discount on your first
                 order! Be the first to access exclusive offers, product updates,
@@ -33,9 +35,9 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Email"
-                  className="rounded-l-50 w-full border bg-transparent px-5 py-2.5 lg:px-10 lg:py-5"
+                  className="w-full rounded-l-50 border bg-transparent px-5 py-2.5 lg:px-10 lg:py-5"
                 />
-                <button className="rounded-r-50 w-32 border bg-white px-5 py-2.5 font-semibold text-custom-purple-800 lg:w-48 lg:px-10 lg:py-5">
+                <button className="w-32 rounded-r-50 border bg-white px-5 py-2.5 font-semibold text-custom-purple-800 lg:w-48 lg:px-10 lg:py-5">
                   Subscribe
                 </button>
               </label>

@@ -30,7 +30,9 @@ const DesktopNav = ({ navigation }: DesktopNavProps) => {
     <nav className="relative hidden items-center justify-between border-b-2 border-b-custom-black-200 p-7 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] md:flex lg:px-14">
       <div className="mx-auto flex w-full max-w-screen-xl lg:max-w-screen-xl">
         <div className="flex w-full items-center gap-x-16">
-          <Logo className="lg:h-28 lg:w-28" />
+          <Link href="/">
+            <Logo className="lg:h-28 lg:w-28" />
+          </Link>
           {navigation.length > 0 && (
             <ul className="relative flex gap-x-7">
               {navigation.map(({ name, handle, links }) => (
@@ -61,7 +63,7 @@ const DesktopNav = ({ navigation }: DesktopNavProps) => {
                       className={cn(
                         "absolute top-6 mt-2 flex flex-col overflow-hidden bg-white transition-all duration-500 ease-linear",
                         isMenuVisible[name]
-                          ? "rounded-4 h-fit border py-2"
+                          ? "h-fit rounded-4 border py-2"
                           : "h-0 border-0 border-transparent"
                       )}
                     >
