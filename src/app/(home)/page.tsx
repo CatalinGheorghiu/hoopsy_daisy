@@ -12,6 +12,7 @@ import OrderSteps from "@/components/sections/order-steps/OrderSteps";
 import PopularProducts from "@/components/sections/popular-products/PopularProducts";
 import RichText from "@/components/sections/RichText";
 import Testimonials from "@/components/sections/testimonials/Testimonials";
+import Flowers from "@/public/images/bg_flowers.jpg";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <MultiColumn />
       <RichText />
       <Collage />
-      <ImageBanner />
+      <ImageBanner imageBanner={imageBanner} />
       <FeaturedProduct />
       <Testimonials />
       <Inspiration />
@@ -33,3 +34,11 @@ export default function Home() {
     </>
   );
 }
+
+const imageBanner = {
+  image: Flowers,
+  title: "PULVINAR ALIQUETL ELGET ADIP",
+  content:
+    "Lorem ipsuascm dolor sit amet, cons ectaa eturing. Ut adipass isciicang eu, vulputate vulputate congue adipi avoscing integer volutpat. vitae a",
+  buttonText: "Shop Now"
+};
