@@ -3,7 +3,6 @@ import { StaticImageData } from "next/image";
 import { ProductType } from "@/lib/product/types";
 
 export type CollectionType = {
-  all_products_count: number;
   all_tags: string[];
   all_types: string[];
   all_vendors: string[];
