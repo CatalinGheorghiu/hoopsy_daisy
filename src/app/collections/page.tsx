@@ -1,15 +1,17 @@
+import Collections from "@/components/sections/collections/Collections";
 import ImageBanner from "@/components/sections/image-banner/ImageBanner";
 import Flowers from "@/public/images/bg_flowers.jpg";
 
-const Collection = () => {
+const CollectionsPage = () => {
   return (
     <>
       <ImageBanner imageBanner={imageBanner} />
+      <Collections />
     </>
   );
 };
 
-export default Collection;
+export default CollectionsPage;
 
 const imageBanner = {
   image: Flowers,
