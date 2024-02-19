@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { VariantType } from "@/components/sections/popular-products/PopularProducts";
 import Slider from "@/components/ui/Slider";
+import { VariantType } from "@/lib/product/types";
 
 type FeaturedProductImageProps = { product: VariantType };
 

@@ -3,14 +3,11 @@
 import { useState } from "react";
 
 import SwatchList from "@/components/product/SwatchList";
-import {
-  ProductType,
-  VariantType
-} from "@/components/sections/popular-products/PopularProducts";
 import ProductDetails from "@/components/sections/popular-products/ProductDetails";
 import ProductImage from "@/components/sections/popular-products/ProductImage";
 import TagList from "@/components/sections/popular-products/TagList";
 import { Button } from "@/components/ui/Button";
+import { ProductType, VariantType } from "@/lib/product/types";
 import { getUniqueByKey } from "@/lib/utils";
 
 type ProductCardProps = {

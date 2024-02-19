@@ -7,11 +7,9 @@ import QuantitySelector from "@/components/product/QuantitySelector";
 import SizeList from "@/components/product/SizeList";
 import SwatchList from "@/components/product/SwatchList";
 import FeaturedProductImage from "@/components/sections/featured-product/FeaturedProductImage";
-import {
-  popularProducts,
-  VariantType
-} from "@/components/sections/popular-products/PopularProducts";
 import { Button } from "@/components/ui/Button";
+import { popularProducts } from "@/lib/product";
+import { VariantType } from "@/lib/product/types";
 import { formatNumberWithComma, getUniqueByKey } from "@/lib/utils";
 
 const featuredProduct = popularProducts[1];

@@ -6,7 +6,7 @@ const TagList = ({ tags }: TagListProps) => {
   if (tags.length < 1) return;
 
   return (
-    <ul className="absolute left-4 top-4 flex gap-x-4">
+    <ul className="absolute left-4 top-4 flex flex-wrap gap-4">
       {tags.map((tag, index) => (
         <li
           key={`tag-${tag}-${index}`}

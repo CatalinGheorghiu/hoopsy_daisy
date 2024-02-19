@@ -1,4 +1,4 @@
-import { VariantType } from "@/components/sections/popular-products/PopularProducts";
+import { VariantType } from "@/lib/product/types";
 import { cn } from "@/lib/utils";
 
 type SwatchItemProps = {

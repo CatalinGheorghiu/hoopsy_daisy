@@ -1,5 +1,5 @@
-import { VariantType } from "@/components/sections/popular-products/PopularProducts";
 import { Button } from "@/components/ui/Button";
+import { VariantType } from "@/lib/product/types";
 
 type SizeListProps = {
   sizes: VariantType[];

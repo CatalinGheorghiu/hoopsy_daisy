@@ -8,7 +8,7 @@ import Close from "@/components/icons/Close";
 import Logout from "@/components/icons/Logout";
 import Profile from "@/components/icons/Profile";
 import Search from "@/components/icons/Search";
-import { Navigation } from "@/components/layout/Header";
+import { Navigation } from "@/lib/navigation/types";
 import { cn } from "@/lib/utils";
 
 type NavigationDrawerProps = {

@@ -1,5 +1,5 @@
 import SwatchItem from "@/components/product/SwatchItem";
-import { VariantType } from "@/components/sections/popular-products/PopularProducts";
+import { VariantType } from "@/lib/product/types";
 
 type SwatchListProps = {
   variants: VariantType[];

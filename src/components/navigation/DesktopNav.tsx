@@ -7,8 +7,8 @@ import Arrow from "@/components/icons/Arrow";
 import Cart from "@/components/icons/Cart";
 import Profile from "@/components/icons/Profile";
 import Search from "@/components/icons/Search";
-import { Navigation } from "@/components/layout/Header";
 import Logo from "@/components/Logo";
+import { Navigation } from "@/lib/navigation/types";
 import { cn } from "@/lib/utils";
 
 type DesktopNavProps = {

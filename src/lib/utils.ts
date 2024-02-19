@@ -56,7 +56,7 @@ export function getUniqueByKey<T extends Record<string, any>[]>(
     const keyValue = item[key];
 
     // Check if the map already contains a value for the current key
-    if (!map.has(keyValue)) {
+    if (keyValue && !map.has(keyValue)) {
       // If the key is not already present in the map, add the item to the map
       // using the key as the map key and the item itself as the map value
       map.set(keyValue, item);
