@@ -1,9 +1,16 @@
+"use client";
+
 import { useState } from "react";
 
 import Minus from "@/components/icons/Minus";
 import Plus from "@/components/icons/Plus";
+import { cn } from "@/lib/utils";
 
-const QuantitySelector = () => {
+type QuantitySelectorType = {
+  label?: string;
+  className?: string;
+};
+const QuantitySelector = ({ label, className }: QuantitySelectorType) => {
   const [inputValue, setInputValue] = useState(1);
 
   function handleIncrement() {
@@ -16,14 +23,17 @@ const QuantitySelector = () => {
   }
 
   return (
-    <div className="flex justify-between border-t-2 border-custom-black-200 py-6">
-      <label
-        htmlFor="quantity-selector"
-        className="h6-semibold text-custom-black-500"
-      >
-        Quantity
-      </label>
-      <div className="flex">
+    <div className={cn("flex justify-between", className)}>
+      {label && (
+        <label
+          htmlFor="quantity-selector"
+          className="h6-semibold text-custom-black-500"
+        >
+          Quantity
+        </label>
+      )}
+
+      <div className="flex items-center">
         <button
           className="rounded-4 border-2 border-custom-purple-200 bg-custom-purple-100 p-1"
           onClick={handleDecrement}
@@ -34,7 +44,7 @@ const QuantitySelector = () => {
         <input
           type="text"
           id="quantity-selector"
-          className="w-8 text-center text-custom-black-900"
+          className="h-8 w-8 p-1 text-center text-custom-black-900"
           value={inputValue}
           readOnly
           min={1}
