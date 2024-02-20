@@ -106,7 +106,7 @@ const FeaturedProduct = () => {
           )}
 
           {/*  Quantity */}
-          <QuantitySelector />
+          <QuantitySelector label="Quantity" className="py-6" />
 
           {/*  CTA Buttons */}
           <div className="flex flex-col gap-y-4 border-t-2 border-custom-black-200 py-6">
