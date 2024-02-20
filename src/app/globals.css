@@ -133,7 +133,7 @@
   .h4-bold,
   .h5-bold,
   .h6-bold {
-    @apply font-bold;
+    @apply font-black;
   }
 
   .h1-semibold,

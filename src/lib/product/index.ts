@@ -1,4 +1,4 @@
-import { ProductType } from "@/lib/product/types";
+import { ProductType, VariantType } from "@/lib/product/types";
 
 export const popularProducts: ProductType[] = [
   {
@@ -451,3 +451,5 @@ export const popularProducts: ProductType[] = [
     ]
   }
 ];
+
+export const cartProducts: VariantType[] = popularProducts[0].variants;
